@@ -1,0 +1,357 @@
+/* General Styles */
+html, body {
+    height: 100%; /* Full height for html and body */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #d4d4c9;
+    min-height: 100vh; /* Ensure body takes full height */
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    color: white;
+    margin: 0;
+    font-family: monospace;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+    color: #007BFF;
+}
+
+/* Slideshow section styling */
+#slideshow {
+    width: 100%; /* Full width */
+    height: 80vh; /* Half of the viewport height */
+    position: relative; /* Keep the slideshow positioned relative to this section */
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    display: flex; /* Use Flexbox for alignment */
+    justify-content: center; /* Center content */
+    align-items: center; /* Center content vertically */
+}
+
+/* Slideshow images */
+.mySlides {
+    display: none; /* Hide slides by default */
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+}
+
+.mySlides img {
+    width: 100%; /* Make the image fill the width */
+    height: 100%; /* Ensure the image fills the height */
+    object-fit: cover; /* Cover to maintain aspect ratio and fill the area */
+}
+
+.dot-container {
+    position: absolute; /* Position absolutely inside the slideshow */
+    bottom: 10px; /* Position from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for center alignment */
+    display: flex; /* Flexbox for aligning dots */
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px; /* Space between dots */
+    background-color: #bbb; /* Default dot color */
+    border-radius: 50%; /* Make dots round */
+    display: inline-block; /* Make dots inline */
+    transition: background-color 0.6s ease; /* Transition effect */
+}
+
+.active, .dot:hover {
+    background-color: #717171; /* Active and hover color */
+}
+
+/* Main content */
+main {
+    flex: 1; /* Allow the main content to take up remaining height */
+}
+
+/* Content below slideshow */
+.homepage-content1 {
+    display: flex;
+    flex-direction: row; /* Places items horizontally */
+    align-items: center; /* Aligns text and image vertically at the center */
+    justify-content: space-between; /* Ensures even spacing between the text and the image */
+    padding: 50px;
+    padding-left: 200px;
+}
+
+.homepage-caption {
+    width: 30%; /* Adjust the width for the text container */
+    padding-right: 20px; /* Adds space between the text and image */
+}
+
+.title-caption {
+    font-family: 'Abel';
+    font-weight: bolder;
+    padding: 4px;
+    font-size: 25px;
+}
+
+#para-caption {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.image-container {
+    width: 60%; /* Adjusts the width for the image container */
+}
+
+.image-container img {
+    width: 100%; /* Makes the image fill the container */
+    max-width: 400px; /* Controls the maximum width of the image */
+    height: auto; /* Keeps image proportions */
+}
+
+/* Product Section */
+#products {
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    font-weight: bolder;
+    text-align: center;
+}
+
+/* Grid Layout */
+.homepage-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: auto;
+    gap: 0;
+    padding: 50px;
+    padding-left: 200px;
+    max-width: 1000px;
+}
+
+.grid-item {
+    position: relative;
+    width: 100%;  /* Box width */
+    height: auto; /* Box height */
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #ddd; /* Border around each box */
+    transition: transform 0.3s ease;
+    transform: scale(0.9);
+    margin: 0;
+}
+
+.grid-item img {
+    width: 100%;  /* Image fits the width of the box */
+    height: 100%; /* Image fits the height of the box */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.grid-item:hover {
+    transform: scale(1.00); /* Slight zoom on hover */
+}
+
+.grid-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.tap-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    padding: 5px;
+    font-size: 10px;
+    padding-bottom: 300px;
+    padding-left: 0;
+    padding-right: 10px;
+}
+
+.tap-title {
+    font-size: 40px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#tap-para {
+    font-size: 15px; /* Smaller font for the description */
+}
+
+/* Horizontal line */
+.horizontal-line {
+    width: 1200px; /* Line length */
+    height: 2px; /* Thickness of the line */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), black, rgba(0, 0, 0, 0.5)); /* Gradient for fading effect */
+    margin: 20px auto; /* Center the line and add margin */
+}
+
+/* Brand section */
+.brands-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.brand-image-1 {
+    padding-top: 30px;
+    padding-left: 450px;
+    width: 250px;
+}
+
+.brand-image-2 {
+    padding-top: 30px;
+    padding-left: 100px;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+  
+  /* Footer Sections */
+  .footer-section {
+    flex: 1 1 250px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .footer-section p,
+  .footer-section a {
+    font-size: 14px;
+    color: #bbb;
+    line-height: 24px;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    color: #fff;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #bbb;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #fff;
+  }
+  
+  /* Social Media Icons */
+  .footer-section.social a {
+    margin-right: 10px;
+    color: #bbb;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-section.contact p img {
+    margin-right: 8px; /* Space between icon and text */
+} 
+  .footer-section.social a:hover {
+    color: #fff;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #bbb;
+    border-top: 1px solid #333;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-section {
+      margin-bottom: 30px;
+    }
+  }
+  
